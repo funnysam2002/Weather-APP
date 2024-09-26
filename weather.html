@@ -1,0 +1,60 @@
+<!--weather app
+1.HTML PAGE'
+2.CSS PAGE
+JS PAGE
+USE fetch keyword
+two apis to be used
+a.. weather api,
+b.. lat&long api
+open weather api-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <link rel="stylesheet" href="weather.css">
+</head>
+<body>
+    
+    <div class="container">
+        <h2>WEATHER REPORT</h2>
+        <div id="searchBox">
+            <input type="text" id="cityName">
+            <button id="detailsbtn">Search</button>
+        </div>
+            
+        <div id="box1">
+            <p id="description">--</p>
+            <img src="" id="descicon" alt="">
+            <div id="inner-box1">
+                <p>max temp:<span id="maxtemp">--</span></p>
+                <p>min temp:<span id="mintemp">--</span></p>
+                <p>feels like:<span id="feelslike">--</span></p>
+            </div>
+        </div>
+        <div id="box2">
+            <p>Humidity:<span id="humidity">--</span></p>
+            <p>Temperature:<span id="temp">--</span></p>
+            <p>Pressure:<span id="pressure">--</span></p>
+        </div>
+        <div id="box3">
+            <div id="innerbox31">
+                <img src="sunrise.png" alt="">
+                <p>Sunrise:<span id="sunrise">--</span></p>
+            </div>
+            <div id="innerbox32">
+                <img src="sunset.png" alt="">
+                <p>Sunset:<span id="sunset">--</span></p>
+            </div>
+        </div>
+        <div>
+            <button id="reset">Reset</button>
+        </div>
+         
+    </div>
+    <script src="weather.js"></script>
+</body>
+</html>
+
