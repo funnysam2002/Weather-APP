@@ -14,47 +14,66 @@ open weather api-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather app</title>
-    <link rel="stylesheet" href="weather.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
     <div class="container">
         <h2>WEATHER REPORT</h2>
+        <!--//search input-->
         <div id="searchBox">
             <input type="text" id="cityName">
             <button id="detailsbtn">Search</button>
         </div>
-            
+         <!--//container having description,max-temp,min-temp,feelslike -->
         <div id="box1">
-            <p id="description">--</p>
+            <p id="description" style="font-size:19px">--</p>
             <img src="" id="descicon" alt="">
             <div id="inner-box1">
-                <p>max temp:<span id="maxtemp">--</span></p>
-                <p>min temp:<span id="mintemp">--</span></p>
-                <p>feels like:<span id="feelslike">--</span></p>
+                <ul>
+                    <li>max temp:<span id="maxtemp">--</span></li>
+                    <li>min temp:<span id="mintemp">--</span></li>
+                    <li>feels like:<span id="feelslike">--</span></li>
+                </ul>
             </div>
         </div>
+        <!--container having humidity,pressure,temp-->
         <div id="box2">
-            <p>Humidity:<span id="humidity">--</span></p>
-            <p>Temperature:<span id="temp">--</span></p>
-            <p>Pressure:<span id="pressure">--</span></p>
-        </div>
+            <div id="humidity1">
+                <p>Humidity:</p>
+                <span id="humidity">--</span>
+            </div>
+            <div id="temp1">
+                <p>Temperature:</p>
+                <span id="temp">--</span>
+            </div>
+            <div id="pressure1">
+                <p>Pressure:</p>
+                <span id="pressure">--</span>
+            </div>
+            </div>
+
+        <!--//container having sunrise and sunset-->
         <div id="box3">
             <div id="innerbox31">
                 <img src="sunrise.png" alt="">
-                <p>Sunrise:<span id="sunrise">--</span></p>
+                <p>Sunrise:</p>
+                <span id="sunrise">--</span>
             </div>
             <div id="innerbox32">
                 <img src="sunset.png" alt="">
-                <p>Sunset:<span id="sunset">--</span></p>
+                <p>Sunset:</p>
+                <span id="sunset">--</span>
             </div>
         </div>
-        <div>
+        <!--//container for reset button-->
+        <div id="rstbtn">
             <button id="reset">Reset</button>
         </div>
          
     </div>
-    <script src="weather.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
+
 
