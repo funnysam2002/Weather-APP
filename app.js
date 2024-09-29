@@ -29,6 +29,7 @@ function fetchWeather(city){
 
     
                 // document.getElementById('city-name').textContent = city;
+                let cityDisplay = city[0].toUpperCase()+city.slice(1);
                 document.getElementById('descicon').src = `http://openweathermap.org/img/w/${details.Icon}.png`;
                 document.getElementById('description').innerText = `${details.description}`;
                 document.getElementById('temp').innerText = `${details.Temp} K`;
@@ -39,6 +40,7 @@ function fetchWeather(city){
                 document.getElementById('pressure').innerText = `${details.Pressure} hPa`;
                 document.getElementById('sunrise').innerText = `${details.Sunrise}`;
                 document.getElementById('sunset').innerText = `${details.Sunset}`;
+                document.getElementById('discity').innerText = `${cityDisplay}`
 
                 document.querySelector("#searchBox").style.border='none'
                 document.getElementById("cityName").style.display = 'none' ;
@@ -61,19 +63,20 @@ document.getElementById('detailsbtn').addEventListener('click', getWeather);
 
 // 
 document.querySelector("#reset").addEventListener('click',()=>{
-    document.getElementById('descicon').src = ``;
-    document.getElementById('description').innerText = `--`;
-    document.getElementById('temp').innerText = `--`;
-    document.getElementById('feelslike').innerText = `--`;
-    document.getElementById('maxtemp').innerText = `--`;
-    document.getElementById('mintemp').innerText = `--`;
-    document.getElementById('humidity').innerText = `--`;
-    document.getElementById('pressure').innerText = `--`;
-    document.getElementById('sunrise').innerText = `--`;
-    document.getElementById('sunset').innerText = `--`;
+    document.getElementById('descicon').src = "";
+    document.getElementById('description').innerText = ``;
+    document.getElementById('temp').innerText = ``;
+    document.getElementById('feelslike').innerText = ``;
+    document.getElementById('maxtemp').innerText = ``;
+    document.getElementById('mintemp').innerText = ``;
+    document.getElementById('humidity').innerText = ``;
+    document.getElementById('pressure').innerText = ``;
+    document.getElementById('sunrise').innerText = ``;
+    document.getElementById('sunset').innerText = ``;
     document.getElementById("cityName").value= '' ;
+    document.getElementById('discity').innerText = '';
 
-    document.querySelector("#searchBox").style.border='2px solid black'
+ 
     document.getElementById("cityName").style.display = 'block' ;
     document.getElementById("detailsbtn").style.display = 'block' ;
 })
