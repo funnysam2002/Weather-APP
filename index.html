@@ -15,6 +15,13 @@ open weather api-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather app</title>
     <link rel="stylesheet" href="style.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-straight/css/uicons-regular-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <style>
+        .container{
+            background-image:linear-gradient(rgb(0, 141, 218),rgb(65, 201, 226),rgb(84, 195, 146));
+        }
+    </style>
 </head>
 <body>
     
@@ -24,32 +31,39 @@ open weather api-->
         <div id="searchBox">
             <input type="text" id="cityName">
             <button id="detailsbtn">Search</button>
+            <h3 id="discity" style="font-size:30px;margin-left:10px;color:white;"></h2>
         </div>
          <!--//container having description,max-temp,min-temp,feelslike -->
         <div id="box1">
-            <p id="description" style="font-size:19px">--</p>
-            <img src="" id="descicon" alt="">
-            <div id="inner-box1">
-                <ul>
-                    <li>max temp:<span id="maxtemp">--</span></li>
-                    <li>min temp:<span id="mintemp">--</span></li>
-                    <li>feels like:<span id="feelslike">--</span></li>
-                </ul>
+            <div id="innerbox11">
+                <p id="description" style="font-size:19px; padding-top:10px"></p>
+                <img src="" id="descicon" alt=" ">
+            </div>
+            <div id="innerbox12">
+                <p style="text-decoration: underline; padding-bottom: 10px;padding-top: 10px;">Max Temperature:</p>
+                <span id="maxtemp" style="padding-top: 5px;"></span><br>
+                <p style="text-decoration: underline;padding-bottom: 10px;" >Min Temperature:</p>
+                <span id="mintemp" style="padding-top: 5px;"></span><br>
+                <p style="text-decoration: underline;padding-bottom: 10px;">Feels like:</p>
+                <span id="feelslike" style="padding-top: 5px;"></span>           
             </div>
         </div>
         <!--container having humidity,pressure,temp-->
         <div id="box2">
             <div id="humidity1">
-                <p>Humidity:</p>
-                <span id="humidity">--</span>
+                <p style="padding-bottom: 6px;">Humidity:</p><br>
+                <span id="humidity"></span>
+                <i class="fi fi-rs-humidity"></i>
             </div>
             <div id="temp1">
-                <p>Temperature:</p>
-                <span id="temp">--</span>
+                <p style="padding-bottom: 6px;">Temperature:</p><br>
+                <span id="temp"></span>
+                <i class="fi fi-rs-temperature-high"></i>
             </div>
             <div id="pressure1">
-                <p>Pressure:</p>
-                <span id="pressure">--</span>
+                <p style="padding-bottom: 6px;">Pressure:</p><br>
+                <span id="pressure"></span>
+                <i class="fi fi-br-arrow-down-strenght"></i>
             </div>
             </div>
 
@@ -58,12 +72,12 @@ open weather api-->
             <div id="innerbox31">
                 <img src="sunrise.png" alt="">
                 <p>Sunrise:</p>
-                <span id="sunrise">--</span>
+                <span id="sunrise"></span>
             </div>
             <div id="innerbox32">
                 <img src="sunset.png" alt="">
                 <p>Sunset:</p>
-                <span id="sunset">--</span>
+                <span id="sunset"></span>
             </div>
         </div>
         <!--//container for reset button-->
